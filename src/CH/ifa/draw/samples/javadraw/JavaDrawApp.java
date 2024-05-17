@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -84,6 +84,9 @@ public  class JavaDrawApp extends MDI_DrawApplication {
 		
 		tool = new UndoableTool(new CreationTool(this, new DiamondFigure()));
 		palette.add(createToolButton(IMAGES + "DIAMOND", "Diamond Tool", tool));
+
+		tool = new UndoableTool(new CreationTool(this, new HexagonFigure()));
+		palette.add(createToolButton(IMAGES + "HEXAGON", "Hexagon Tool", tool));
 			
 		tool = new UndoableTool(new CreationTool(this, new LineFigure()));
 		palette.add(createToolButton(IMAGES + "LINE", "Line Tool", tool));
@@ -99,6 +102,9 @@ public  class JavaDrawApp extends MDI_DrawApplication {
 
 		tool = new UndoableTool(new BorderTool(this));
 		palette.add(createToolButton(IMAGES + "BORDDEC", "Border Tool", tool));
+
+		tool = new UndoableTool(new MovementTool(this));
+		palette.add(createToolButton(IMAGES + "BORDDEC", "Movement Tool", tool));
 	}
 
 	protected Tool createSelectionTool() {

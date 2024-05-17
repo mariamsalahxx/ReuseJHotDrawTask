@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -71,6 +71,9 @@ public  class JavaDrawApplet extends DrawApplet {
 		
 		tool = new CreationTool(this, new DiamondFigure());
 		palette.add(createToolButton(IMAGES + "DIAMOND", "Diamond Tool", tool));
+
+		tool = new CreationTool(this, new HexagonFigure());
+		palette.add(createToolButton(IMAGES + "HEXAGON", "Hexagon Tool", tool));
 
 		tool = new CreationTool(this, new LineFigure());
 		palette.add(createToolButton(IMAGES + "LINE", "Line Tool", tool));
